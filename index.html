@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="dice-game">
+            
+            <form class="formD" id="formD" onSubmit="ChangeName(event)">
+                <h1 class="heading">
+                    Please Enter Name of players
+                </h1>
+                <div class="boxes">
+                    <div class="field">
+                        <input type="text" placeholder="Enter Player 1 Name" required />
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Enter Player 2 Name" required />
+                    </div>
+                    <div class="field">
+                        <input type="number" placeholder="Enter Total Score" min="10" max="100" required />
+                    </div>
+                    <div class="field button">
+                        <input type=submit value="Start Game" />
+                    </div>
+                </div>
+            </form>
+
+            <div class="GameBox" id="GameBox">
+                <div class="board">
+                    <div class="player1 player" id="player1">
+                        <h1 class="player-heading" >
+                            PLAYER 1
+                        </h1>
+                        <h1 class="score">
+                            0
+                        </h1>
+                        <div class="dice">
+                            <img src="image/dice1.png"/>
+                        </div>
+                        <div class="field button" id="player-1-button">
+                            <input id="button1" type="button" value="Roll Dice" onclick="Roll(1)" />
+                        </div>
+                    </div>
+                    <div class="player2 player" id="player2">
+                        <h1 class="player-heading">
+                            PLAYER 2
+                        </h1>
+                        <h1 class="score">
+                            0
+                        </h1>
+                        <div class="dice">
+                            <img src="image/dice1.png"/>
+                        </div>
+                        <div class="field button" id="player-2-button">
+                            <input id="button2" type="button" value="Roll Dice" onclick="Roll(2)" disabled />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Javascript/javascript.js"></script>
+    
+</body>
+</html>
